@@ -91,3 +91,48 @@ label{
     align-items: center;
     gap: 1.6em;
 }
+
+
+
+@media screen and (max-width: 550px) {
+    .container{   
+        width: 98vw;
+        max-width: none;
+        height: 120px;
+    }
+
+    .search-wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.25em;
+    }
+
+
+    .search-wrapper button{
+        padding: 16px 32px;
+    }
+    
+    .search-wrapper input{
+        text-align: center;
+    }
+
+    .result-container{
+        background-color: #fff;
+        width: 98vw;
+        max-width: none;
+        height: 300px;
+        padding: 1.2em 2.5em;
+       
+    }
+
+    label h1{
+        font-size: 19px;
+    }
+
+    .result-details-wrapper{
+        margin-top: 24px;
+        padding: 4px 7px;
+    }
+    
+    
+}

@@ -9,9 +9,9 @@ const resultContainer= document.querySelector(".result-container");
 
 searchBtn.addEventListener('click', ()=>{
     let countryName= countryInput.value ? countryInput.value.trim() : "";
-    console.log(countryName)
     try {
-        urlFunction(countryName)
+        urlFunction(countryName);
+        countryInput.value= "";
     } catch (error) {
         errorMessage.textContent= error;
     }
@@ -47,7 +47,7 @@ function showResults(data){
     resultContainer.innerHTML = `
             <div class="image-wrapper">
                 <img src="${data[0].flags.png}" alt="" width="65%" height="120px">
-                <p>${data[0].flags.alt}</p>
+                <p>${data[0].flags.alt.substring(0, 100)}...</p>
             </div>
             <div class="result-details-wrapper">
                 <label><h1>Country:</h1><h2>${data[0].name.common}</h2></label>
