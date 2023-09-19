@@ -46,7 +46,7 @@ async function fetchFunction(url){
 function showResults(data){
     resultContainer.innerHTML = `
             <div class="image-wrapper">
-                <img src="${data[0].flags.png}" alt="" width="65%" height="120px">
+                <img src="${data[0].flags.png}" alt="">
                 <p>${data[0].flags.alt.substring(0, 100)}...</p>
             </div>
             <div class="result-details-wrapper">
