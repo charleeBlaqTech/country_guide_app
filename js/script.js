@@ -11,7 +11,6 @@ searchBtn.addEventListener('click', ()=>{
     let countryName= countryInput.value ? countryInput.value.trim() : "";
     try {
         urlFunction(countryName);
-        countryInput.value= "";
     } catch (error) {
         errorMessage.textContent= error;
     }
@@ -36,6 +35,7 @@ async function fetchFunction(url){
         const response= await fetch(url);
         const data = await response.json();
         showResults(data)
+        countryInput.value= "";
     } catch (error) {
         errorMessage.textContent= error;
     }

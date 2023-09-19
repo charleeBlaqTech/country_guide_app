@@ -145,7 +145,7 @@ label h1{
         width: 98vw;
         max-width: none;
         height: 300px;
-        padding: 1.2em 2.5em;
+        padding: 1.8em 2.5em;
        
     }
 
@@ -162,11 +162,12 @@ label h1{
     .image-wrapper{
         display: flex;
         flex-direction: column;
-        gap: 1.4rem;
+        gap: 16px;
+        object-fit:contain;
     }
     .image-wrapper img{
         width:90%;
-        height:120px;
+        height:90px;
     }
     .image-wrapper p{
         font-size: 13px;
